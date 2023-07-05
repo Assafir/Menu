@@ -1,0 +1,621 @@
+﻿<head>
+<meta property="og:url" content="https://Assafir.github.io/Menu/ViewMenu.htm" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Assafir" />
+<meta property="og:description" content="Assafir Online Menu" />
+<meta property="og:image" content="https://Assafir.github.io/Menu/logo.gif" />
+</head>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
+
+function ScrollRemove() {
+
+document.getElementsByClassName("tablinks")[0].click();
+
+
+/* use    (isTouchDevice())    instead but doesn't always work*/
+if (window.matchMedia("(pointer: coarse)").matches) {
+document.getElementById('ALeft').style.visibility = 'hidden';
+document.getElementById('ARight').style.visibility = 'hidden';
+} else {
+
+var style = document.createElement('style');
+style.innerHTML = `
+
+.arrow-right {
+  float:right;
+  width: 0;
+  height: 0; 
+  border-top: 37px solid transparent;
+  border-bottom: 37px solid transparent;
+  border-left: 70px solid grey; 
+}
+.arrow-left {
+  float:left;
+  border-top: 37px solid transparent;
+  border-bottom: 37px solid transparent; 
+  border-right:70px solid grey; 
+}
+  `;
+document.head.appendChild(style);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+var newwindow
+
+function tidy()
+{
+if (newwindow && !newwindow.closed) { newwindow.close(); }
+}
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+
+  return false;  }
+
+function moveNavigation(byX) {
+  var navigation = document.getElementsByClassName("tab")[0];
+  navigation.scrollLeft = navigation.scrollLeft + byX;
+  }
+
+function popup(mylink, windowname) { if (! window.focus)return true; var href;
+if (typeof(mylink) == 'string') href=mylink; else href=mylink.href;
+window.open(href, windowname, 'width=400,height=800,scrollbars=yes'); return false; }
+
+window.onload = ScrollRemove;
+
+</script>
+
+
+
+
+<Style>
+    .tab-navigation {
+  border: 1px solid solid gray;
+}
+/* Style the tab */
+
+/* To Hide Scrollbar in Desktop PC */
+.tab::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+    .tab .imgcss{  
+        animation:scroll 6s linear 0s infinite;  
+    } 
+    .tab .textcss {
+        animation:textScroll 6s linear 0s infinite;  
+    }
+
+
+.tab {
+    overflow-x: Auto;
+    background-color: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    white-space: nowrap;
+    border:solid 0px solid gray;
+    text-align:center;}
+/* Style the buttons that are used to open the tab content */
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+  background-color: #ddd;
+}
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 2px 2px;
+  border: 1px solid solid gray;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tab-control {
+background-color: #ddd;
+}
+
+.tab button 
+            img {
+                width:100%;
+                height:100%;
+            },
+
+.tab-control {
+background-color: #f1f1f1;
+/* float: left; */
+display: inline-block;
+border:solid 1px solid gray;
+outline: none;
+cursor: pointer;
+padding: 0px 4px;
+transition: 0.3s;
+font-size: 60px;
+}
+
+.tablinks {border-radius: 0px;}
+/* Radius of Curavture at edge*/
+
+</Style>
+
+
+<script>var Currency1 = "$" </script><link rel="icon" type="image/x-icon" href="favicon.ico" > <form><input type="button" value="Main Page" onclick="location.href= '/'; return false;"  style="float: right;height:66; width:250; background-color: rgb(255,255,255); color: RGB(45,45,45); font-size:32pt; font-weight:bold"></form><font face='Helvetica' style="color: rgb(0,0,0); font-size: 16pt;">Menu By MyShopPOS <br><a href="https://MyShopPOS.wordpress.com"  target="_blank" rel="noopener noreferrer" style="color: inherit;text-decoration:none; cursor: pointer; cursor: hand;">MyShopPOS.wordpress.com</a>
+<body style="background-color: rgb(255,255,255); color: RGB(45,45,45); "><br> <font style="font-size: 14pt;">2023/07/05 15:24:20
+<title></title>
+<body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table border=0 style='border-width:0; width:100%; cellspacing='0' cellpadding='0'>
+<colgroup><col span='1'><col span='1' style='width: 60%;'><col span='1' style='width: 17%;'></colgroup>
+<tr>
+<td style='border-style: none; border-width: medium'></td>
+<td style='border-style: none; border-width: medium; width:100%'><p align='center'>
+<font face='Helvetica'><center>
+<style>
+@media (orientation: landscape) {img {width: 25%;}};
+@media (orientation: portrait) {img {width: 60%;}};
+</style>
+<img src='Logo.gif'  width="40%" alt='Missing Logo' class='center'>
+</center></font>
+<td style='border-style: none; border-width: medium'></td>
+</tr>
+<tr>
+<th style='border-style: none; border-width: medium'></th>
+<th style='border-style: none; border-width: medium'>
+<br><font face='Helvetica' style='font-size: 48pt'></font></th>
+<th style='border-style: none; border-width: medium'></th>
+</tr>
+<tr>
+<td style='border-style: none; border-width: medium'></td>
+<td align='center' style='border-style: none; border-width: medium'>
+<font face='Helvetica' style="color: rgb(0,0,0); font-size: 32pt;"><center>Tel. 01-350001 <br>Ext. 100</font></td>
+<td align='right' style='border-style: none; border-width: medium'>
+</tr>
+</table><br>
+
+    <div class="tab-navigation">
+  <button style="height:0px; background-color:transparent; font-size:0pt" id="ALeft" class="tab-control arrow-left" onclick="moveNavigation(-.8*screen.width)"></button>
+
+  <button style="height:0px; background-color:transparent; font-size:0pt" id="ARight"  class="tab-control arrow-right" onclick="moveNavigation(.8*screen.width)"></button>
+
+<div class="tab">
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Kaakeh')"><img src="Menu Photos\Kaakeh.jpg"  width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Salads')"><img src="Menu Photos\Salads.jpg"  width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Desserts')"><img src="Menu Photos\Desserts.jpg"  width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Hot Beverages')"><img src="Menu Photos\Hot%20Beverages.jpg"  width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Cold Beverages')"><img src="Menu Photos\Cold%20Beverages.jpg"  width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Alcohol')"><img src="Menu Photos\Alcohol.jpg"  width="100%" height="100%" alt="" /></button>
+</div>
+
+<div id="Kaakeh" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cheese جبنة<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Mix of Kashkaval and Mozzarella cheese, served with olives and vegetables<br>مزيج من جبنة القشقوان والموزاريلا، تقدم مع الزيتون والخضار<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Labneh لبنة<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Labneh served with olives and vegetables<br>لبنة  تقدم مع الزيتون والخضار<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Labneh Zaatar لبنة زعتر<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Labneh & zaatar, Served with olives and vegetables.<br>لبنة وزعتر، تقدم مع الزيتون والخضار<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.75 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Turkey Cheese حبش وجبنة<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Turkey, Cheese, Pickles, Lettuce, Tomato, Mayonnaise and mustard<br>حبش، جبنة، كبيس، خس، بندورة، مايونيز وخردل<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Chicken دجاج<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Chicken, Cheese, Tomatoes, Pickles, Lettuce, Garlic Paste<br>دجاج، جبنة، بندورة، كبيس، خس، توم<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Sujuk سجق<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Sujuk, Pickles, Tomato, Garlic paste<br>سجق، كبيس، بندورة، ثوم<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'><div name = "Rosto روستو" style='display: none;' id="Rosto روستو17"><button type="button" value = "5.5" name = "Rosto روستو" id="sub17" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Rosto روستو" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "5.5" id="add17" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Halloumi Pesto حلوم بستو <br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Halloumi cheese, Pesto sauce<br>حلوم، بيستو<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">4.30 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Eggplant باذنجان<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Fried Eggplant, tarator (tahini-based sause)<br>باذنجان مقلي، طراطور<br><br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.20 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cauliflower قرنبيط<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Roasted cauliflower, raisins, almonds, tarator (tahini-based sauce)<br>قرنبيط مشوي، زبيب، لوز، طراطور<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.20 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Veggie خضار<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Cauliflower, eggplant, tarator (tahini-based sauce)<br>قرنبيط، باذنجان، طراطور<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Kaakeh Hallawi كعكة حلاوة<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Melted hallawi<br>حلاوة <br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.30 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+<div id="Salads" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Fattoush فتوش<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Lettuce, Tomato, Cucumber, Onion, Radish, Mint, Carrot, White cabbage, Red cabbage, Croutons with Sumac<br>خس، بندورة، خيار، بصل، فجل، نعنع، جزر، ملفوف أبيض، ملفوف أحمر، خبز محمص مع سماق<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Betroot Salad سلطة شمندر<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Beetroot and Lentils with Tahini-Lemon sauce<br>شمندر وعدس، مع الطحينة والحامض<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Tuna Salad سلطة تون<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Tuna, Lettuce, Tomato, Cucumber, Carrot, Corn, Red cabbage with Mayo-Mustard Lemon Sauce<br>طون، خس، بندورة، خيار، جزر، ذرة، ملفوف أحمر مع صوص المايو والخردل والحامض<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Raheb Salad سلطة الراهب<br><font face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;"><br>Grilled Eggplant ,Tomato , Green Pepper, Red Pepper, Cucumber, Onion ,Walnut<br>باذنجان مشوي، بندورة، فلفل اخضر، فلفل احمر، خيار، بصل، جوز<br><br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+<div id="Desserts" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cake of the day كعكة اليوم
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.70 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cookies كوكيز
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">1.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cheese Cake فطيرة الجبن
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+<div id="Hot Beverages" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Espresso إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">1.20 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Decaf Espresso إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">1.20 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Doppio دوبل إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Americano أميريكانو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">1.80 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Latte لاتيه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Cappuccino كابوتشينو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Hot Chocolate شوكولاتة ساخنة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Rakwe قهوة عربية
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">1.90 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">French Press فرنش برس
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Decaf French Press فرنش براس ديكاف
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.80 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Flat White فلات وايت
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Mocha موكاتشينو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.80 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Tea شاي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+<div id="Cold Beverages" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Iced Coffee قهوة مثلجة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Iced Latte لاتيه مثلجة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Lemonade ليموناضة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Minted Lemonade ليموناضة مع نعنع
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Orange Juice عصير برتقال
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Apple Juice عصير تفاح
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Carrot juice عصير جزر
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Soft Drink مشروب غازي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">0.80 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Sparkling Water مياه غازية
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Water مياه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">0.42 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Add Flavour طعمات
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">0.21 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Add Milk حليب
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">0.45 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+<div id="Alcohol" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(0,0,0); border-collapse:collapse;}</style></head><body style="background-color: rgb(255,255,255); color: rgb(0,0,0); "><table style="width:100%"><font face="Helvetica" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Almaza بيرة المازة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Almaza Light المازة لايت
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.70 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Almaza Dark المازة دارك
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">2.90 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Red Wine نبيذ أحمر
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">White Wine نبيذ أبيض
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Rose Wine نبيذ زهري
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Arak عرق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Arak LG عرق كبير
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Arak quarter Bottle ربعية عرق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Gin جين
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Gin Basil جين مع حبق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Gin Tonic جين تونيك
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'><div name = "Glenbey Whiskey غلينباي ويسكي" style='display: none;' id="Glenbey Whiskey غلينباي ويسكي93"><button type="button" value = "5" name = "Glenbey Whiskey غلينباي ويسكي" id="sub93" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Glenbey Whiskey غلينباي ويسكي" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "5" id="add93" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Jamesson Whiskey جيمسون ويسكي " style='display: none;' id="Jamesson Whiskey جيمسون ويسكي 94"><button type="button" value = "5" name = "Jamesson Whiskey جيمسون ويسكي " id="sub94" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Jamesson Whiskey جيمسون ويسكي " value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "5" id="add94" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Vodka فودكا
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Vodka Orange فودكا مع برتقال
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Wine Bottle زجاجة نبيذ
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">14.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Helvetica" style="font-size:45px"><p face="Helvetica" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:75px;line-height: 80%;">Premium Wine Bottle زجاجة نبيذ باب أول
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:helvetica;font-size:45px; text-align:right;vertical-align:top">20.00 $
+</p></td></tr>
+
+<font style='font-family:helvetica;font-size:45px;'><div name = "Studio" style='display: none;' id="Studio109"><button type="button" value = "20" name = "Studio" id="sub109" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Studio" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add109" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Music Room" style='display: none;' id="Music Room110"><button type="button" value = "20" name = "Music Room" id="sub110" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Music Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add110" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Arts Room" style='display: none;' id="Arts Room111"><button type="button" value = "20" name = "Arts Room" id="sub111" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Arts Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add111" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "LT Studio" style='display: none;' id="LT Studio112"><button type="button" value = "20" name = "LT Studio" id="sub112" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Studio" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add112" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "LT Music Room" style='display: none;' id="LT Music Room113"><button type="button" value = "20" name = "LT Music Room" id="sub113" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Music Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add113" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "LT Arts Room" style='display: none;' id="LT Arts Room114"><button type="button" value = "20" name = "LT Arts Room" id="sub114" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Arts Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add114" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "GF Full Day" style='display: none;' id="GF Full Day123"><button type="button" value = "20" name = "GF Full Day" id="sub123" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="GF Full Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add123" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "GF Half Day" style='display: none;' id="GF Half Day124"><button type="button" value = "20" name = "GF Half Day" id="sub124" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="GF Half Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add124" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Exhibition service FD" style='display: none;' id="Exhibition service FD125"><button type="button" value = "20" name = "Exhibition service FD" id="sub125" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Exhibition service FD" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add125" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Service Per Hour" style='display: none;' id="Service Per Hour126"><button type="button" value = "20" name = "Service Per Hour" id="sub126" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Service Per Hour" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add126" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Package 1 per person" style='display: none;' id="Package 1 per person127"><button type="button" value = "20" name = "Package 1 per person" id="sub127" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 1 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add127" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Package 2 per person" style='display: none;' id="Package 2 per person128"><button type="button" value = "20" name = "Package 2 per person" id="sub128" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 2 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add128" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Package 3 per person" style='display: none;' id="Package 3 per person129"><button type="button" value = "20" name = "Package 3 per person" id="sub129" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 3 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add129" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Package 4 per person" style='display: none;' id="Package 4 per person130"><button type="button" value = "20" name = "Package 4 per person" id="sub130" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 4 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add130" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Services Others $100" style='display: none;' id="Services Others $100137"><button type="button" value = "20" name = "Services Others $100" id="sub137" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $100" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add137" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Services Others $50" style='display: none;' id="Services Others $50138"><button type="button" value = "20" name = "Services Others $50" id="sub138" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $50" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add138" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Services Others $10" style='display: none;' id="Services Others $10139"><button type="button" value = "20" name = "Services Others $10" id="sub139" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $10" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add139" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "Services Others $1" style='display: none;' id="Services Others $1140"><button type="button" value = "20" name = "Services Others $1" id="sub140" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $1" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add140" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "M.R. Per Hour" style='display: none;' id="M.R. Per Hour141"><button type="button" value = "20" name = "M.R. Per Hour" id="sub141" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Per Hour" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add141" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "M.R. Half Day" style='display: none;' id="M.R. Half Day142"><button type="button" value = "20" name = "M.R. Half Day" id="sub142" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Half Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add142" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'><div name = "M.R. Full Day" style='display: none;' id="M.R. Full Day143"><button type="button" value = "20" name = "M.R. Full Day" id="sub143" class="sub" style='display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Full Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "20" id="add143" class="add" style='display: none;'>+</button></div></font><font style='font-family:helvetica;font-size:45px;'></table>
+</div>
+
+
+
