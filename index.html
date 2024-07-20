@@ -1,0 +1,872 @@
+﻿<head>
+<meta property="og:url" content="https://Assafir.github.io/Menu/ViewMenu.htm" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Assafir" />
+<meta property="og:description" content="Assafir Online Menu" />
+<meta property="og:image" content="https://Assafir.github.io/Menu/logo.gif" />
+</head>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
+
+function ScrollRemove() {
+
+document.getElementsByClassName("tablinks")[0].click();
+
+
+/* use    (isTouchDevice())    instead but doesn't always work*/
+if (window.matchMedia("(pointer: coarse)").matches) {
+document.getElementById('ALeft').style.visibility = 'hidden';
+document.getElementById('ARight').style.visibility = 'hidden';
+} else {
+
+var style = document.createElement('style');
+style.innerHTML = `
+
+.arrow-right {
+  float:right;
+  width: 0;
+  height: 0; 
+  border-top: 37px solid transparent;
+  border-bottom: 37px solid transparent;
+  border-left: 70px solid grey; 
+}
+.arrow-left {
+  float:left;
+  border-top: 37px solid transparent;
+  border-bottom: 37px solid transparent; 
+  border-right:70px solid grey; 
+}
+  `;
+document.head.appendChild(style);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+var newwindow
+
+function tidy()
+{
+if (newwindow && !newwindow.closed) { newwindow.close(); }
+}
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+
+  return false;  }
+
+function moveNavigation(byX) {
+  var navigation = document.getElementsByClassName("tab")[0];
+  navigation.scrollLeft = navigation.scrollLeft + byX;
+  }
+
+function popup(mylink, windowname) { if (! window.focus)return true; var href;
+if (typeof(mylink) == 'string') href=mylink; else href=mylink.href;
+window.open(href, windowname, 'width=400,height=800,scrollbars=yes'); return false; }
+
+window.onload = ScrollRemove;
+
+</script>
+
+
+
+
+<Style>
+    .tab-navigation {
+  border: 1px solid solid gray;
+}
+/* Style the tab */
+
+/* To Hide Scrollbar in Desktop PC */
+.tab::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+    .tab .imgcss{  
+        animation:scroll 6s linear 0s infinite;  
+    } 
+    .tab .textcss {
+        animation:textScroll 6s linear 0s infinite;  
+    }
+
+
+.tab {
+    overflow-x: Auto;
+    background-color: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    white-space: nowrap;
+    border:solid 0px solid gray;
+    text-align:center;}
+/* Style the buttons that are used to open the tab content */
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+  background-color: #ddd;
+}
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 2px 2px;
+  border: 1px solid solid gray;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tab-control {
+background-color: #ddd;
+}
+
+.tab button 
+            img {
+                width:100%;
+                height:100%;
+            },
+
+.tab-control {
+background-color: #f1f1f1;
+/* float: left; */
+display: inline-block;
+border:solid 1px solid gray;
+outline: none;
+cursor: pointer;
+padding: 0px 4px;
+transition: 0.3s;
+font-size: 60px;
+}
+
+.tablinks {border-radius: 0px;}
+/* Radius of Curavture at edge*/
+
+</Style>
+
+
+<div id="containerdiv" >
+<style>#fullscreenDiv {display: none;position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);color: white;}</style>
+<script>function normalT(x){var formatted = x.replace(/\s+/g, ' ');var formatted = formatted.normalize('NFKD').replace(/\p{Diacritic}/gu, '');return formatted;}function popit(ider){var TyTy = ider.name;var selectElement = document.getElementById('TableStyle');var options = selectElement.options;for (var option of options) {var texter = normalT(option.text);if (texter ==TyTy) {option.selected = true;break;}};var elem = document.getElementById('fullscreenDiv'); elem.style.display = 'none';}var w = window.innerWidth;var h = window.innerHeight;
+
+function loadExternalDiv() {fetch('tabler.htm')
+.then(function(response) {return response.text();})
+.then(function(data) {
+var newDiv = document.createElement("div");newDiv.id = "fullscreenDiv";newDiv.innerHTML = data;newDiv.style.display = "none";var containerdiv = document.getElementById("containerdiv");containerdiv.appendChild(newDiv);
+})
+.catch(function(error) {console.error('Error:', error);});
+var dive = document.getElementById("fullscreenDiv");if (dive) {dive.style.display = "block";};}
+var dive = document.getElementById("containerdiv");if (dive) {dive.style.display = "block";};
+
+function ReloadExternalDiv() {
+var containerdiv = document.getElementById("containerdiv");var externalDiv = document.getElementById("fullscreenDiv");
+containerdiv.removeChild(externalDiv);loadExternalDiv();loadExternalDiv()}
+
+var Currency1 = "$" </script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" > <form><input type="button" value="Main Page" onclick="location.href= '/'; return false;"  style="float: right;height:66; width:250; background-color: transparent; color: RGB(255,255,255); font-size:32pt; font-weight:bold"></form><font face='Arial' style="color: rgb(255,255,255); font-size: 16pt;">Menu By MyShopPOS <br><a href="https://MyShopPOS.wordpress.com"  target="_blank" rel="noopener noreferrer" style="color: inherit;text-decoration:none; cursor: pointer; cursor: hand;">MyShopPOS.wordpress.com</a>
+<body style="background-size: 100%;background-color: rgb(); color: RGB(255,255,255); "><br> <font style="font-size: 14pt;">2024/07/20 18:01:50
+<title></title>
+<body background='back.jpg' style="width: 100%;"><table border=0 style='border-width:0; width:100%; cellspacing='0' cellpadding='0'>
+<colgroup><col span='1'><col span='1' style='width: 60%;'><col span='1' style='width: 17%;'></colgroup>
+<tr>
+<td style='border-style: none; border-width: medium'></td>
+<td style='border-style: none; border-width: medium; width:100%'><p align='center'>
+<font face='Arial'><center>
+<style>
+@media (orientation: landscape) {img {width: 25%;}};
+@media (orientation: portrait) {img {width: 60%;}};
+</style>
+<img src='Logo.gif'  width="40%" alt='Missing Logo' class='center'>
+</center></font>
+<td style='border-style: none; border-width: medium'></td>
+</tr>
+<tr>
+<th style='border-style: none; border-width: medium'></th>
+<th style='border-style: none; border-width: medium'>
+<br><font face='Arial' style='font-size: 48pt'></font></th>
+<th style='border-style: none; border-width: medium'></th>
+</tr>
+<tr>
+<td style='border-style: none; border-width: medium'></td>
+<td align='center' style='border-style: none; border-width: medium'>
+<font face='Arial' style="color: rgb(255,255,255); font-size: 32pt;"><center>Tel. 01-350001 <br>Ext. 101</font></td>
+<td align='right' style='border-style: none; border-width: medium'>
+</tr>
+</table><br>
+
+    <div class="tab-navigation">
+  <button style="height:0px; background-color:transparent; font-size:0pt" id="ALeft" class="tab-control arrow-left" onclick="moveNavigation(-.8*screen.width)"></button>
+
+  <button style="height:0px; background-color:transparent; font-size:0pt" id="ARight"  class="tab-control arrow-right" onclick="moveNavigation(.8*screen.width)"></button>
+
+<div class="tab">
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Sandwiches')"><img src="Menu Photos\Sandwiches.jpg" onerror="this.src='Menu%20Photos%5CSandwiches.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Salads')"><img src="Menu Photos\Salads.jpg" onerror="this.src='Menu%20Photos%5CSalads.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Desserts')"><img src="Menu Photos\Desserts.jpg" onerror="this.src='Menu%20Photos%5CDesserts.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Hot Beverages')"><img src="Menu Photos\Hot Beverages.jpg" onerror="this.src='Menu%20Photos%5CHot%20Beverages.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Cold Beverages')"><img src="Menu Photos\Cold Beverages.jpg" onerror="this.src='Menu%20Photos%5CCold%20Beverages.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Infusion & Tea')"><img src="Menu Photos\Infusion & Tea.jpg" onerror="this.src='Menu%20Photos%5CInfusion%20%26%20Tea.jpg';" width="100%" height="100%" alt="" /></button>
+<button style="border:none; outline: none; width:400px; background: none; height:200px" class="tablinks" onclick="return openCity(event, 'Drinks')"><img src="Menu Photos\Drinks.jpg" onerror="this.src='Menu%20Photos%5CDrinks.jpg';" width="100%" height="100%" alt="" /></button>
+</div>
+
+<div id="Sandwiches" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Labneh لبنة<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Labneh, tomatoes, cucumber, olive paste, olive oil, mint.<br>لبنة، بندورة، خيار، معجون الزيتون، زيت زيتون، نعنع<br><br><br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Feta فيتا<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Feta, olive paste, tomatoes, fresh thyme, cucumber, lettuce.<br>جبنة فيتا، معجون الزيتون، زعتر أخضر، خيار، خس<br><br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Halloumi Pesto حلوم بيستو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Halloum grilled, tomatoes, olive paste, cucumber, pesto sauce, lettuce. (suggestion: + grilled eggplant), with a light salad<br>حلوم مشوي، بندورة، معجون الزيتون، خيار، صلصة بيستو، خس (ننصح بزيادة الباذنجان)<br>مع سلطة <br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Tripolitan Kaakeh كعكة طرابلسية<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Tripolitan  Kaakeh wood oven baked, cheese mix, sumac.<br>كعكة طرابلسية مخبوزة بفرن الحطب، خلطة جبن، سماق<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Hommos Avocado حمص أفوكادو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Multicereal bread, Hommos, Avocado, sun-dried tomatoes, mint.<br>خبز متعدد الحبوب، حمص، افوكادو، بندورة مجففة، نعنع<br><br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Turkey حبش<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Turkey, emmental, mayonnaise, mustard, tomatoes, pickles, lettuce .with a light salad<br>حبش، جبنة ايمنتال، مايونيز، خردل، بندورة، كبيس، خس<br>مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Chicken Pesto دجاج بيستو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Grilled chicken, pesto, avocado, tomatoes, pickles, lettuce. with a light salad<br>دجاج مشوي، صلصة بيستو، افوكادو، بندورة، كبيس،  خس .مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Chicken Mustard دجاج مع خردل<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Grilled chicken, butter, mustard, mayonnaise, tomatoes, pickles, lettuce.with a light salad<br>دجاج مشوي، زبدة، خردل، مايونيز، بندورة، كبيس، خس<br>مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Light Chicken دجاج لايت<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Multicereal bread, grilled chicken, tomatoes, pickles, lettuce, light mayonnaise.with a light salad<br>خبز متعدد الحبوب، دجاج مشوي، بندورة ، كبيس، خس، مايونيز لايت . مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Rosto روستو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Roast beef, mayonnaise, Mustard, tomatoes, pickles, rocca .with a light salad<br>روستو، مايونيز، خردل، بندورة، كبيس، روكا مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Tuna Mayo تونة مايو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Tuna, mayonnaise, olive paste, lettuce, tomatoes, pickles.with a light salad<br>تونة، مايونيز، معجون زيتون، خس، بندورة، كبيس<br>مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Crab Avocado كراب افوكادو<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Crab, Avocado, iceberg, sauce cocktail.with a light salad<br>سلطعون، افوكادو، خس آيس بيرغ، صلصة كوكتيل مع سلطة خفيفة<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Half sandwich نصف ساندوش" style='display: none;' id="Half sandwich نصف ساندوش23"><button type="button" value = "7" name = "Half sandwich نصف ساندوش" id="sub23" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Half sandwich نصف ساندوش" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "7" id="add23" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Add Multicereal
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">0.70 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Salads" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Fattoush فتوش<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Lettuce, Tomato, Cucumber, Rocca, Radish, Mint, cabbage, Parsley, Zaatar, croutons and sumac<br>خس، بندورة، خيار، روكا، فجل، نعنع، ملفوف، زعتر،بقدونس، خبز محمص مع سماق<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Greek Salad سلطة يونانية<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Feta cheese, thym, tomatoes, cucumber, olives, Lettuce, Mint <br>جبنة فيتا، زعتر أخضر، بندورة، خيار، زيتون، خس، نعنع<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Betroot Salad سلطة شمندر<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Beetroot and Lentils with lettuce . Tahini-Lemon sauce<br>شمندر وعدس ، مع خس و الطحينة والحامض<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Tuna Salad سلطة تون<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Tuna, Lettuce, Tomato, Cucumber, Carrot, Corn, Red cabbage with Mayo-Mustard Lemon Sauce<br>طون، خس، بندورة، خيار، جزر، ذرة، ملفوف أحمر مع صوص المايو والخردل والحامض<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Rocca Salad سلطة روكا<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Parmesan cheese, rocca, tomatoes, mushrooms, balsamic sauce<br>جبنة بارميزان، روكا، بندورة، فطر، صلصة بالزاميك<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Crab Salad سلطة كراب<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Crab, Avocado, Carrots, Rocca, Lettuce, mayo sauce<br>سلطعون، أفوكادو، جزر، روكا، خس، صلصة مايونيز<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cesar Salad سلطة سيزر<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Parmesan Cheese, Lettuce, Croutons, Cesar Dressing<br>جبنة بارميزان، خس، مكعبات خبز محمص، صوص سيزر ،  قطع دجاج<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Chicken Halloumi Salad  سلطة حلوم مع الدجاج<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Grilled halloumi , grilled chicken , avocado , iceberg , cherry tomatos , cucumber .<br>حلوم مشوي، دجاج مشوي، أفوكادو، خيار، خس ايس برغ، بندورة كرزية<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Turkey Halloumi Salad سلطة حبش وحلوم<font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:12px;line-height: 50%;"><br>&nbsp<br></font><font face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:36px;line-height: 100%;">Grilled halloumi, Turkey, avocado, iceberg, cherry, tomatos, cucumber.<br>حلوم مشوي، حبش، أفوكادو، خيار، خس ايس برغ، بندورة كرزية<br>
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">7.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Add Chicken
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">1.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Add Ingredient" style='display: none;' id="Add Ingredient36"><button type="button" value = "1" name = "Add Ingredient" id="sub36" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Add Ingredient" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add36" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Baguette Normal" style='display: none;' id="Baguette Normal37"><button type="button" value = "1" name = "Baguette Normal" id="sub37" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Baguette Normal" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add37" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Baguette Multicereal" style='display: none;' id="Baguette Multicereal38"><button type="button" value = "1" name = "Baguette Multicereal" id="sub38" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Baguette Multicereal" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add38" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Soup of the day  الشوربة اليومية" style='display: none;' id="Soup of the day  الشوربة اليومية39"><button type="button" value = "1" name = "Soup of the day  الشوربة اليومية" id="sub39" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Soup of the day  الشوربة اليومية" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add39" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Lentil soup  شوربة عدس" style='display: none;' id="Lentil soup  شوربة عدس40"><button type="button" value = "1" name = "Lentil soup  شوربة عدس" id="sub40" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Lentil soup  شوربة عدس" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add40" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Croissant كرواسون " style='display: none;' id="Croissant كرواسون 53"><button type="button" value = "1" name = "Croissant كرواسون " id="sub53" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Croissant كرواسون " value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add53" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Almond croissant كرواسون اللوز " style='display: none;' id="Almond croissant كرواسون اللوز 54"><button type="button" value = "1" name = "Almond croissant كرواسون اللوز " id="sub54" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Almond croissant كرواسون اللوز " value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add54" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Abou Antar أبو عنتر" style='display: none;' id="Abou Antar أبو عنتر55"><button type="button" value = "1" name = "Abou Antar أبو عنتر" id="sub55" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Abou Antar أبو عنتر" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "1" id="add55" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Desserts" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cake of the day كيك اليوم
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Special Cake of the day سباشيل كيك" style='display: none;' id="Special Cake of the day سباشيل كيك68"><button type="button" value = "3.5" name = "Special Cake of the day سباشيل كيك" id="sub68" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Special Cake of the day سباشيل كيك" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3.5" id="add68" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cookies كوكيز
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Healthy cookies كوكيز صحي" style='display: none;' id="Healthy cookies كوكيز صحي70"><button type="button" value = "2" name = "Healthy cookies كوكيز صحي" id="sub70" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Healthy cookies كوكيز صحي" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "2" id="add70" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Brownie براوني 
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Chocoba شوكوبا
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Chocolate Peanut Butter شوكولا مع زبدة الفول السوداني
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Peanut Butter Banana موز مع زبدة الفول السوداني
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Hot Beverages" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Espresso إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">1.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Decaf Espresso إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">1.75 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Doppio دوبل إسبريسو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.80 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Americano أميريكانو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.80 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Latte لاتيه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cappuccino كابوتشينو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Hot Chocolate شوكولاتة ساخنة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Rakwe قهوة عربية
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Nescafe نسكافيه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.20 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">French Press فرنش برس
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Decaf French Press فرنش براس ديكاف
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Flat White فلات وايت
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Mocha موكاتشينو
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Ginger Mocha جينجر موكا
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Cold Beverages" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Iced Coffee قهوة مثلجة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Iced Latte لاتيه مثلجة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Lemonade ليموناضة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Minted Lemonade ليموناضة مع نعنع
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.20 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Orange Juice عصير برتقال
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Daily juice العصير اليومي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Smoothie of the day سموزي اليوم
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Iced mocha frappe موكا فرابية مثلجة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Milk shake ميلك شيك
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Soft Drink مشروب غازي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">1.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Sparkling Water مياه غازية
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Water مياه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">0.45 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Add Milk حليب
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">0.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Add Flavour طعمات
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">0.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Infusion & Tea" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Tea شاي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Green Tea شاي أخضر
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Herbal Tea زهورات
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.30 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Melissa مليسة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Camomille بابونج
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.30 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Anise يانسون
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cumin كمون
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Cumin with lemon كمون و ليمون
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Mate متة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Mint نعنع
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Hibiscus Tea كركديه
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.30 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Ginger Tea زنجبيل 
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.80 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Add ginger
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">1.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+<div id="Drinks" class="tabcontent">
+<table>
+<head><style>table, th, td {border: 0px solid rgb(255,255,255); border-collapse:collapse;}</style></head><body background='back.jpg' style="width: 100%;"><table style="margin-left: auto; margin-right: auto; width:90%;>"<font face="Arial" style="font-size:55px"> &nbsp </font>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Almaza بيرة المازة
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Almaza Light المازة لايت
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Almaza Dark المازة دارك
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Heineken بيرة هينيكن
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.30 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">961 Lager Beer
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">961 IPA Beer
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Red Wine نبيذ أحمر
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">White Wine نبيذ أبيض
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Rose Wine نبيذ زهري
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Wine Bottle زجاجة نبيذ" style='display: none;' id="Wine Bottle زجاجة نبيذ175"><button type="button" value = "4" name = "Wine Bottle زجاجة نبيذ" id="sub175" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Wine Bottle زجاجة نبيذ" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "4" id="add175" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Premium Wine Bottle زجاجة نبيذ باب أول" style='display: none;' id="Premium Wine Bottle زجاجة نبيذ باب أول176"><button type="button" value = "4" name = "Premium Wine Bottle زجاجة نبيذ باب أول" id="sub176" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Premium Wine Bottle زجاجة نبيذ باب أول" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "4" id="add176" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Arak عرق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Arak Large  عرق كبير
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Arak Quarter Bottle ربعية عرق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Gin جين
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Gin Basil جين مع حبق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Gin Tonic جين تونيك
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Glenbey Whiskey غلينباي ويسكي
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Jameson Whiskey جيمسون ويسكي 
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Jack Daniels جاك دانيلز 
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">8.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Glenfiddich 12 غلينفيدك 
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">10.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Glenbey Bottle زجاجة غلينباي" style='display: none;' id="Glenbey Bottle زجاجة غلينباي187"><button type="button" value = "10" name = "Glenbey Bottle زجاجة غلينباي" id="sub187" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Glenbey Bottle زجاجة غلينباي" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "10" id="add187" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Jameson Bottle زجاجة جيمسون" style='display: none;' id="Jameson Bottle زجاجة جيمسون188"><button type="button" value = "10" name = "Jameson Bottle زجاجة جيمسون" id="sub188" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Jameson Bottle زجاجة جيمسون" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "10" id="add188" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Vodka Orange فودكا مع برتقال
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">5.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Vodka فودكا
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Vodka Premium فودكا بريميوم
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">6.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Irish Coffee
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">4.50 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Shot
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Peanuts فستق
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">2.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'>
+<tr><td  VALIGN=TOP><font face="Arial" style="font-size:45px"><p face="Arial" style="font-size-adjust: none;text-size-adjust: none;-webkit-text-size-adjust: none;font-size:55px;line-height: 90%;">Nuts مكسرات
+</br></br></td>
+<td "col width=38%" valign="top" style="font-family:Arial;font-size:45px; text-align:right;vertical-align:top">3.00 $
+</p></td></tr>
+
+<font style='font-family:Arial;font-size:45px;'><div name = "Studio" style='display: none;' id="Studio207"><button type="button" value = "3" name = "Studio" id="sub207" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Studio" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add207" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Music Room" style='display: none;' id="Music Room208"><button type="button" value = "3" name = "Music Room" id="sub208" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Music Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add208" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Arts Room" style='display: none;' id="Arts Room209"><button type="button" value = "3" name = "Arts Room" id="sub209" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Arts Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add209" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "LT Studio" style='display: none;' id="LT Studio210"><button type="button" value = "3" name = "LT Studio" id="sub210" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Studio" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add210" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "LT Music Room" style='display: none;' id="LT Music Room211"><button type="button" value = "3" name = "LT Music Room" id="sub211" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Music Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add211" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "LT Arts Room" style='display: none;' id="LT Arts Room212"><button type="button" value = "3" name = "LT Arts Room" id="sub212" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="LT Arts Room" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add212" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "GF Full Day" style='display: none;' id="GF Full Day221"><button type="button" value = "3" name = "GF Full Day" id="sub221" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="GF Full Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add221" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "GF Half Day" style='display: none;' id="GF Half Day222"><button type="button" value = "3" name = "GF Half Day" id="sub222" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="GF Half Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add222" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Exhibition service FD" style='display: none;' id="Exhibition service FD223"><button type="button" value = "3" name = "Exhibition service FD" id="sub223" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Exhibition service FD" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add223" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Service Per Hour" style='display: none;' id="Service Per Hour224"><button type="button" value = "3" name = "Service Per Hour" id="sub224" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Service Per Hour" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add224" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Package 1 per person" style='display: none;' id="Package 1 per person225"><button type="button" value = "3" name = "Package 1 per person" id="sub225" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 1 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add225" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Package 2 per person" style='display: none;' id="Package 2 per person226"><button type="button" value = "3" name = "Package 2 per person" id="sub226" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 2 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add226" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Package 3 per person" style='display: none;' id="Package 3 per person227"><button type="button" value = "3" name = "Package 3 per person" id="sub227" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 3 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add227" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Package 4 per person" style='display: none;' id="Package 4 per person228"><button type="button" value = "3" name = "Package 4 per person" id="sub228" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Package 4 per person" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add228" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Services Others $100" style='display: none;' id="Services Others $100263"><button type="button" value = "3" name = "Services Others $100" id="sub263" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $100" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add263" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Services Others $50" style='display: none;' id="Services Others $50264"><button type="button" value = "3" name = "Services Others $50" id="sub264" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $50" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add264" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Services Others $10" style='display: none;' id="Services Others $10265"><button type="button" value = "3" name = "Services Others $10" id="sub265" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $10" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add265" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "Services Others $1" style='display: none;' id="Services Others $1266"><button type="button" value = "3" name = "Services Others $1" id="sub266" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="Services Others $1" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add266" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "M.R. Per Hour" style='display: none;' id="M.R. Per Hour267"><button type="button" value = "3" name = "M.R. Per Hour" id="sub267" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Per Hour" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add267" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "M.R. Half Day" style='display: none;' id="M.R. Half Day268"><button type="button" value = "3" name = "M.R. Half Day" id="sub268" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Half Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add268" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'><div name = "M.R. Full Day" style='display: none;' id="M.R. Full Day269"><button type="button" value = "3" name = "M.R. Full Day" id="sub269" class="sub" style='touch-action: manipulation;display: none;'>-</button><input type="number" readonly name="-##ItemToOrderQuantity##-" id="M.R. Full Day" value="0" min="0" max="100"  style='display: none;'/><button type="button" name = "" value = "3" id="add269" class="add" style='touch-action: manipulation;display: none;'>+</button></div></font><font style='font-family:Arial;font-size:45px;'></table>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+$(this).find('.sellers').css("visibility", "visible");});
+</script>
